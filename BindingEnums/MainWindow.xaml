@@ -9,16 +9,16 @@
         <ObjectDataProvider x:Key="dataFromEnum" MethodName="GetValues"
                             ObjectType="{x:Type sys:Enum}">
             <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="local:Status"/>
+                <x:Type TypeName="local:Status" />
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </Window.Resources>-->
-    
+
     <Grid>
         <!--<ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="150"
-                  ItemsSource="{Binding Source={StaticResource dataFromEnum}}"/>-->
+                  ItemsSource="{Binding Source={StaticResource dataFromEnum}}" />-->
 
         <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="150"
-                  ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:Status}}}"/>
+                  ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:Status}}}" />
     </Grid>
 </Window>

@@ -17,7 +17,8 @@ namespace BindingEnums
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            CultureInfo info = new CultureInfo("ja-JP");
+            //CultureInfo info = new CultureInfo("ja-JP");
+            CultureInfo info = new CultureInfo("zh-Hans");
             Thread.CurrentThread.CurrentCulture = info;
             Thread.CurrentThread.CurrentUICulture = info;
         }

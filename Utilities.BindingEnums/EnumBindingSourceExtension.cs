@@ -1,12 +1,21 @@
 ﻿using System;
 using System.Windows.Markup;
 
-namespace BindingEnums
+namespace Utilities.BindingEnums
 {
+    /// <summary>
+    /// 绑定枚举扩展类
+    /// </summary>
     public class EnumBindingSourceExtension : MarkupExtension
     {
+        /// <summary>
+        /// 枚举的Type类型
+        /// </summary>
         private Type _enumType;
 
+        /// <summary>
+        /// 枚举的Type类型
+        /// </summary>
         public Type EnumType
         {
             get { return this._enumType; }
@@ -27,15 +36,30 @@ namespace BindingEnums
             }
         }
 
+        /// <summary>
+        /// 构造方法
+        /// </summary>
         public EnumBindingSourceExtension()
         {
         }
 
+        /// <summary>
+        /// 构造方法
+        /// </summary>
+        /// <param name="enumType"></param>
         public EnumBindingSourceExtension(Type enumType)
         {
             this.EnumType = enumType;
         }
 
+        /// <summary>
+        /// 枚举到绑定值提供者
+        /// </summary>
+        /// <remarks>
+        /// 把枚举转换为列表返回
+        /// </remarks>
+        /// <param name="serviceProvider"></param>
+        /// <returns></returns>
         public override object ProvideValue(IServiceProvider serviceProvider)
         {
             if (null == this._enumType)
